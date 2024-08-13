@@ -8,13 +8,15 @@ pub fn main() void {
     //Every variable needs to start with a value. If a value is not know, we should give the value of undefined.
     var c: i32 = undefined;
 
+    b = b + 10;
+    c = 10;
     std.debug.print("Variable a: {}\n", .{a});
     std.debug.print("Variable b: {}\n", .{b});
     std.debug.print("Variable c: {}\n", .{c});
 
     // @as performs an explicity type coercion
     const i_a = @as(i32, 4);
-    var i_b = @as(u32, 40);
+    const i_b = @as(u32, 40);
 
     std.debug.print("Variable i_a type: {}, value {}\n", .{ @TypeOf(i_a), i_a });
     std.debug.print("Variable i_b type: {}, value {}\n", .{ @TypeOf(i_b), i_b });
